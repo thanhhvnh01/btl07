@@ -34,7 +34,7 @@
         <?php include( 'includes/ket_noi.php') ?>
          
         <?php
-            $sql_san_pham = mysqli_query($ket_noi, "select * from tbl_san_pham");
+            $sql_san_pham = mysqli_query($ket_noi, "select * from tbl_menu");
             $so_san_pham = mysqli_num_rows($sql_san_pham);
 
             $sql_don_hang = mysqli_query($ket_noi, "select * from tbl_hdb");

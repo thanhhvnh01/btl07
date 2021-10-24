@@ -39,20 +39,19 @@
 	if($filename == NULL)
 	{
 		$sql = "
-		UPDATE `tbl_phan_loai`
-		SET
-			`ten_phan_loai` = '".$ten_phan_loai."',
-			`mo_ta` = '".$mo_ta."'
-			WHERE `id_phan_loai` = '".$id_phan_loai."'
+				UPDATE `tbl_phan_loai` 
+				SET `ten_phan_loai` = '".$ten_phan_loai."', 
+				`anh` = '".$file_anh_tam."', 
+				`mo_ta` = '".$mo_ta."' 
+				WHERE `tbl_phan_loai`.`id_phan_loai` = '".$id_phan_loai."';
 		";
 	} else {
 		$sql = "
-		UPDATE `tbl_phan_loai`
-		SET
-			`ten_phan_loai` = '".$ten_phan_loai."',
-			`anh` = '".$filename."',
-			`mo_ta` = '".$mo_ta."'
-			WHERE `id_phan_loai` = '".$id_phan_loai."' 
+				UPDATE `tbl_phan_loai` 
+				SET `ten_phan_loai` = '".$ten_phan_loai."', 
+				`anh` = '".$file_anh_tam."', 
+				`mo_ta` = '".$mo_ta."' 
+				WHERE `tbl_phan_loai`.`id_phan_loai` = '".$id_phan_loai."';
 		";
 	}
 //echo $sql; exit();

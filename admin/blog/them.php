@@ -73,8 +73,6 @@
 									<textarea name="noi_dung" class="form-control"></textarea>
 								</div>
 							</div>
-							
-
 							<div class="col-md-12 text-center">
 								<button type="submit" class="btn btn-primary">Thêm mới</button>
 							</div>

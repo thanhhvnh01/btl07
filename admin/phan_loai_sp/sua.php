@@ -56,7 +56,7 @@
 					$row = mysqli_fetch_array($phan_loai);
 				;?>
 				<!-- /.card-header -->
-							<form action="./sua_thuc_hien.php" method="POST" enctype="multipart/form-data">
+					<form action="./sua_thuc_hien.php" method="POST" enctype="multipart/form-data">
 					<p>
 						Tên loại sản phẩm <br>
 						<input type="text" name="txtten_phan_loai" value="<?php echo $row['ten_phan_loai'];?>" style="width: 100%;">

@@ -24,13 +24,9 @@
 
 	$ten_sp = $_POST["ten_sp"];
 	$id_phan_loai = $_POST["id_phan_loai"];
-	$id_ncc = $_POST["id_ncc"];
 	$so_luong = $_POST["so_luong"];
 	$gia_ban = $_POST["gia_ban"];
 	$muc_km = $_POST["muc_km"];
-	$gia_giam = $_POST["gia_giam"];
-	$size = $_POST["size"];
-	$mau = $_POST["mau"];
 	$mo_ta = $_POST["mo_ta"];
 
 	// Lấy ra thông tin ảnh minh họa
@@ -45,8 +41,9 @@
 	}
 	// 3. Viết câu lệnh SQL để thêm mới tin tức có ID như trên
 	$sql = "
-		INSERT INTO `tbl_san_pham` (`ten_sp`, `id_phan_loai`, `id_ncc`, `so_luong`,`gia_ban`,`muc_km`,`gia_giam`, `size`, `mau`, `mo_ta`, `anh`) 
-		VALUES ('".$ten_sp."', '".$id_phan_loai."', '".$id_ncc."', '".$so_luong."', '".$gia_ban."', '".$muc_km."', '".$gia_giam."', '".$size."', '".$mau."', '".$mo_ta."', '".$anh."'); ";
+			INSERT INTO `tbl_menu` (`id_sp`, `id_phan_loai`, `ten_sp`, `so_luong`, `gia_ban`, `anh_minh_hoa`, `muc_km`, `mo_ta`) 
+			VALUES (NULL, '".$id_phan_loai."', '".$ten_sp."', '".$so_luong."', '".$gia_ban."', '".$anh."', '".$muc_km."', '".$mo_ta."');
+		";
 
 	// // 4. Thực hiện truy vấn để thêm mới dữ liệu
 	// mysqli_query($ket_noi, $sql);

@@ -26,13 +26,9 @@
 	// 2. Lẫy dữ liệu để cập nhật tin tức
 	$ten_sp = $_POST["ten_sp"];
 	$id_phan_loai = $_POST["id_phan_loai"];
-	$id_ncc = $_POST["id_ncc"];
 	$so_luong = $_POST["so_luong"];
 	$gia_ban = $_POST["gia_ban"];
 	$muc_km = $_POST["muc_km"];
-	$gia_ban = $_POST["gia_ban"];
-	$size = $_POST["size"];
-	$mau = $_POST["mau"];
 	$mo_ta = $_POST["mo_ta"];
 
 	// Lấy ra thông tin ảnh minh họa
@@ -43,42 +39,38 @@
 		$file_anh_tam = $_FILES["anh"]["tmp_name"];
 		$thuc_hien_luu_anh = move_uploaded_file($file_anh_tam, $anh_minh_hoa);
 		
-		$anh = $filename;;
+		$anh = $filename;
 	}
 
-	if(empty($anh)) {
+	if(empty($anh))
+	{
 		$sql = "
-			UPDATE `tbl_san_pham` 
-			SET
-				`ten_sp` = '".$ten_sp."',
-				`id_phan_loai` = '".$id_phan_loai."',
-				`id_ncc` = '".$id_ncc."',
-				`so_luong` = '".$so_luong."',
-				`gia_ban` = '".$gia_ban."',
-				`muc_km` = '".$muc_km."',
-				`gia_ban` = '".$gia_ban."',
-				`size` = '".$size."',
-				`mau` = '".$mau."',
-				`mo_ta` = '".$mo_ta."'
-				WHERE `id_sp` = '".$id_sp."' 
+				UPDATE `tbl_menu` 
+				SET  
+				`id_phan_loai` = '".$id_phan_loai."', 
+				`ten_sp` = '".$ten_sp."', 
+				`so_luong` = '".$so_luong."', 
+				`gia_ban` = '".$gia_ban."', 
+				`anh_minh_hoa` = '".$anh."', 
+				`muc_km` = '".$muc_km."', 
+				`mo_ta` = '".$mo_ta."' 
+				WHERE `tbl_menu`.`id_sp` = '".$id_sp."';
 		";
 
-	} else {
+	} 
+	else 
+	{
 		$sql = "
-			UPDATE `tbl_san_pham` 
-			SET
-				`ten_sp` = '".$ten_sp."',
-				`id_phan_loai` = '".$id_phan_loai."',
-				`id_ncc` = '".$id_ncc."',
-				`so_luong` = '".$so_luong."',
-				`gia_ban` = '".$gia_ban."',
-				`muc_km` = '".$muc_km."',
-				`gia_ban` = '".$gia_ban."',
-				`size` = '".$size."',
-				`mau` = '".$mau."',
-				`mo_ta` = '".$mo_ta."',
-				`anh` = '".$anh."'
-			 	WHERE `id_sp` = '".$id_sp."' 
+				UPDATE `tbl_menu` 
+				SET  
+				`id_phan_loai` = '".$id_phan_loai."', 
+				`ten_sp` = '".$ten_sp."', 
+				`so_luong` = '".$so_luong."', 
+				`gia_ban` = '".$gia_ban."', 
+				`anh_minh_hoa` = '".$anh."', 
+				`muc_km` = '".$muc_km."', 
+				`mo_ta` = '".$mo_ta."' 
+				WHERE `tbl_menu`.`id_sp` = '".$id_sp."';
 		";
 	}
 

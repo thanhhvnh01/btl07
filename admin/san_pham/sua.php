@@ -46,7 +46,7 @@
 					// secho $id_tin_tuc; exit();
 
 					// 3. Viết câu lệnh SQL để lấy tin tức có ID như trên
-					$sql = "SELECT * FROM tbl_san_pham WHERE id_sp = $id_sp";
+					$sql = "SELECT * FROM tbl_menu WHERE id_sp = $id_sp";
 
 					// 4. Thực hiện truy vấn để lấy dữ liệu
 					$san_pham = mysqli_query($ket_noi, $sql);
@@ -95,20 +95,6 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Nhà cung cấp</label>
-									<select name="id_ncc" class="form-control" required>
-										<?php 
-											$sql_ncc = "SELECT * FROM tbl_ncc";
-											$nccs = mysqli_query($ket_noi, $sql_ncc);
-											while ($ncc = mysqli_fetch_array($nccs)) {
-										?>
-											<option value="<?php echo $ncc['id_ncc'] ?>" <?php echo $ncc['id_ncc']  == $row['id_ncc'] ? 'selected': '' ?>><?php echo $ncc['ten_ncc'] ?></option>
-										<?php } ?>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
 									<label>Số lượng</label>
 									<input name="so_luong" type="number" class="form-control" value="<?php echo $row['so_luong'] ?>" required>
 								</div>
@@ -119,28 +105,10 @@
 									<input name="gia_ban" type="number"  class="form-control" value="<?php echo $row['gia_ban'] ?>" required>
 								</div>
 							</div>
-							<!-- <div class="col-md-6">
+							<div class="col-md-6">
 								<div class="form-group">
 									<label>Mức khuyến mãi</label>
 									<input type="number" name="muc_km" class="form-control" value="<?php echo $row['muc_km'] ?>" >
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Giá giảm</label>
-									<input type="number" name="gia_ban" class="form-control" value="<?php echo $row['gia_ban'] ?>"   >
-								</div>
-							</div> -->
-							<div class="col-md-6">
-								<div class="form-group">
-									<label> Size</label>
-									<input name="size" type="gia_ban" class="form-control" value="<?php echo $row['size'] ?>"  required >
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Màu</label>
-									<input name="mau" type="gia_ban" class="form-control" value="<?php echo $row['mau'] ?>"  required >
 								</div>
 							</div>
 							<div class="col-md-6">

@@ -62,33 +62,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Ngày đăng</label>
-									<input name="id" class="form-control" type="hidden" required value="<?php echo $row['id_tin_tuc'] ?>">
-									<input name="ngay_viet" type="date" class="form-control" required value="<?php echo $row['ngay_viet'] ?>">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Ảnh minh họa</label>
-								
-					
-											<input type="file" name="txtAnhMinhHoa" style="width: 100%;">
-										</p>
-										<p>
-											<img src="../../img/<?php 
-													if ($row["anh"]<>"") {
-														echo $row["anh"];
-													} else {
-														echo "diep1.png";
-													}
-												;?>" width="180px" height="auto">
-										</p>
-					
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Tên</label>
+									<label>Tên BLOG</label>
 									<input name="ten" type="text" class="form-control" value="<?php echo $row['ten'] ?>" required>
 								</div>
 							</div>
@@ -105,7 +79,26 @@
 									<textarea name="noi_dung" class="form-control" required><?php echo $row['noi_dung'] ?></textarea>
 								</div>
 							</div>
-							
+							<div class="form-group">
+									<label>Ngày đăng</label>
+									<input name="id" class="form-control" type="hidden" required value="<?php echo $row['id_tin_tuc'] ?>">
+									<input name="ngay_viet" type="date" class="form-control" required value="<?php echo $row['ngay_viet'] ?>">
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Ảnh minh họa</label>
+										<input type="file" name="txtAnhMinhHoa" style="width: 100%;">
+										<p>
+											<img src="../../img/<?php 
+													if ($row["anh"]<>"") {
+														echo $row["anh"];
+													} else {
+														echo "diep1.png";
+													}
+												;?>" width="180px" height="auto">
+										</p>
+								</div>
+							</div>
 
 							<div class="col-md-12 text-center">
 								<button type="submit" class="btn btn-info">Lưu</button>

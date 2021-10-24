@@ -48,8 +48,9 @@
 						<thead>                  
 						<tr>
 						 	<td>STT</td>
-							<td>Ảnh minh họa</td>
 							<td>Tên loại sản phẩm</td>
+							<td>Ảnh minh họa</td>
+							<td>Mô tả</td>
 							<td></td>
 						</tr>
 						</thead>
@@ -73,6 +74,9 @@
 						     <tr>
 						     	<td><?php echo $i;?></td>
 								<td>
+									<?php echo $row["ten_phan_loai"];?>
+								</td>
+								<td>
 									<img src="/btl/img/<?php 
 											if ($row["anh"]<>"") {
 												echo $row["anh"];
@@ -82,7 +86,7 @@
 										;?>" width="180px" height="auto">
 								</td>
 								<td>
-									<?php echo $row["ten_phan_loai"];?>
+									<?php echo $row["mo_ta"];?>
 								</td>
 								<td>
 									<a href="sua.php?id=<?php echo $row["id_phan_loai"];?>" class="btn btn-info">Sửa</a>

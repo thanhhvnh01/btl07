@@ -40,8 +40,8 @@
 
 	// 3. Viết câu lệnh SQL để thêm mới tin tức có ID như trên
 	$sql = "
-		INSERT INTO `tbl_phan_loai` (`ten_phan_loai`, `anh`, `mo_ta`) 
-		VALUES ('".$ten_phan_loai."', '".$filename."', '".$mo_ta."'); 
+		INSERT INTO `tbl_phan_loai` (`id_phan_loai`, `ten_phan_loai`, `anh`, `mo_ta`) 
+		VALUES (NULL, '".$ten_phan_loai."', '".$file_anh_tam."', '".$mo_ta."');
 	";
 
 	// // 4. Thực hiện truy vấn để thêm mới dữ liệu

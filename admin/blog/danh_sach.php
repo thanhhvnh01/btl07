@@ -29,11 +29,11 @@
 					  <thead>                  
 					    <tr>
 					     	<td>STT</td>
-					     	<td>Ngày đăng</td>
-							<td>Ảnh minh họa</td>
-							<td>Tên blog</td>
+					     	<td>Tên blog</td>
 							<td>Tiêu đề</td>
 							<td>Nội dung</td>
+							<td>Ảnh minh họa</td>
+							<td>Ngày đăng</td>
 					    </tr>
 					  </thead>
 					  <tbody>
@@ -54,20 +54,8 @@
 								$i++;
 						?>
 						    <tr>
-						     	<td><?php echo $i;?></td>
-						     	<td>
-									<?php echo $row["ngay_viet"];?>
-								</td>
-								<td>
-									<img src="/btl/img/<?php 
-											if ($row["anh"]<>"") {
-												echo $row["anh"];
-											} else {
-												echo "diep4.png";
-											}
-										;?>" width="180px" height="auto">
-								</td>
-								<td>
+						    	<td><?php echo $i;?></td>
+						    	<td>
 									<a href="tin_tuc.php?id=<?php echo $row["id_sp"];?>"s><?php echo $row["ten"];?></a>
 								</td>
 								<td>
@@ -76,6 +64,18 @@
 								</td>
 								<td>
 									<?php echo $row["noi_dung"];?>
+								</td>
+						     	<td>
+									<img src="/btl/img/<?php 
+											if ($row["anh"]<>"") {
+												echo $row["anh"];
+											} else {
+												echo "diep4.png";
+											}
+										;?>" width="180px" height="auto">
+								</td>
+						     	<td>
+									<?php echo $row["ngay_viet"];?>
 								</td>
 								<td>
 									<a href="sua.php?id=<?php echo $row["id_tin_tuc"];?>" class="btn btn-info">Sửa</a>

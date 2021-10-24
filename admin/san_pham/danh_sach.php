@@ -49,24 +49,22 @@
 						<thead>                  
 							<tr>
 								<td>STT</td>
-								<td>Ảnh minh họa</td>
 								<td>Tên sản phẩm</td>
 								<td>Loại sp</td>
-								<td>Nhà cung cấp</td>
 								<td>Số lượng</td>
 								<td>Giá Bán</td>
+								<td>Ảnh minh họa</td>
 								<td>Mức khuyến mãi</td>
-								<td>Giá Giảm</td>
+								<td>Mô tả</td>
 								<td></td>
 							</tr>
 						</thead>
 						<tbody>
 							<?php 
 								// 2. Viết câu lệnh SQL để lấy ra dữ liệu mong muốn
-								$sql = "SELECT tbl_san_pham.*, tbl_phan_loai.ten_phan_loai, tbl_ncc.ten_ncc FROM `tbl_san_pham` 
-									INNER JOIN tbl_ncc ON tbl_ncc.id_ncc=tbl_san_pham.id_ncc
-									INNER JOIN tbl_phan_loai ON tbl_phan_loai.id_phan_loai=tbl_san_pham.id_phan_loai
-									ORDER BY tbl_san_pham.id_sp DESC
+								$sql = "SELECT *
+										FROM tbl_menu
+										ORDER BY id_sp DESC
 								";
 
 								// 3. Thực hiện truy vấn để lấy ra các dữ liệu mong muốn
@@ -80,22 +78,10 @@
 								<tr>
 									<td><?php echo $i;?></td>
 									<td>
-										<img src="/btl/img/<?php 
-												if ($row["anh"]<>"") {
-													echo $row["anh"];
-												} else {
-													echo "diep4.png";
-												}
-											;?>" width="100px" height="auto">
-									</td>
-									<td>
 										<?php echo $row["ten_sp"];?>
 									</td>
 									<td>
-										<?php echo $row["ten_phan_loai"];?>
-									</td>
-									<td>
-										<?php echo $row["ten_ncc"];?>
+										<?php echo $row["id_phan_loai"];?>
 									</td>
 									<td>
 										<?php echo $row["so_luong"];?>
@@ -104,10 +90,19 @@
 										<?php echo $row["gia_ban"];?>
 									</td>
 									<td>
+										<img src="/btl/img/<?php 
+												if ($row["anh_minh_hoa"]<>"") {
+													echo $row["anh_minh_hoa"];
+												} else {
+													echo "diep4.png";
+												}
+											;?>" width="100px" height="auto">
+									</td>
+									<td>
 										<?php echo $row["muc_km"];?>
 									</td>
 									<td>
-										<?php echo $row["gia_ban"];?>
+										<?php echo $row["mo_ta"];?>
 									</td>
 									<td>
 										<a href="sua.php?id=<?php echo $row["id_sp"];?>" class="btn btn-info">Sửa</a>

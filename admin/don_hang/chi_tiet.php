@@ -110,9 +110,8 @@
 			                            <tbody>
 										<?php 
 											// 2. Viết câu lệnh SQL để lấy ra dữ liệu mong muốn
-											$sql = "SELECT tbl_chi_tiet_hdb.gia_ban, tbl_chi_tiet_hdb.so_luong, tbl_chi_tiet_hdb.tong_tien, tbl_san_pham.ten_sp, tbl_san_pham.anh FROM tbl_chi_tiet_hdb
-												INNER JOIN tbl_san_pham ON tbl_chi_tiet_hdb.id_sp = tbl_san_pham.id_sp
-												WHERE tbl_chi_tiet_hdb.id_hdb = $id_hdb
+											$sql = "SELECT * FROM `tbl_chi_tiet_hdb`
+													ORDER BY id_chi_tiet DESC
 											"; 
 
 											// 3. Thực hiện truy vấn để lấy ra các dữ liệu mong muốn
@@ -134,7 +133,7 @@
 														}
 													;?>" width="100px" height="auto">
 												</td>
-			                                    <td><?php echo $sp['ten_sp']; ?></td>
+			                                    <td><?php echo $sp['id_sp']; ?></td>
 			                                    <td><?php echo $sp['gia_ban']; ?></td>
 			                                    <td><?php echo $sp['so_luong']; ?></td>
 			                                    <td><?php echo $sp['tong_tien']; ?></td>

@@ -42,8 +42,8 @@
 
 	// 3. Viết câu lệnh SQL để thêm mới tin tức có ID như trên
 	$sql = "
-		INSERT INTO `tbl_tin_tuc` (`ngay_viet`, `anh`, `ten`, `tieu_de`,`noi_dung`) 
-		VALUES ('".$ngay_dang."', '".$filename."', '".$ten."', '".$tieu_de."','".$noi_dung."'); 
+		INSERT INTO `tbl_tin_tuc` (`id_tin_tuc`, `ten`, `tieu_de`, `noi_dung`, `anh`, `ngay_viet`) 
+		VALUES (NULL, '".$ten."', '".$tieu_de."', '".$noi_dung."', '".$anh_minh_hoa."', '".$ngay_dang."'); 
 	";
 
 	// // 4. Thực hiện truy vấn để thêm mới dữ liệu

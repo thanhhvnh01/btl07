@@ -23,10 +23,10 @@
 
 	// 2. Lẫy dữ liệu để cập nhật tin tức
 	$id_tin_tuc = $_POST["txtID"];
-	$ngay_dang = $_POST["ngay_viet"];
 	$ten = $_POST["ten"];
 	$tieu_de = $_POST["tieu_de"];
 	$noi_dung = $_POST["noi_dung"];
+	$ngay_dang = $_POST["ngay_viet"];
 // Lấy ra thông tin ảnh minh họa
 	$filename = basename($_FILES["txtAnhMinhHoa"]["name"]);
 	$anh_minh_hoa = "../../img/".$filename;
@@ -40,24 +40,23 @@
 	if($filename == NULL)
 	{
 		$sql = "
-		UPDATE `tbl_tin_tuc`
-		SET
-			`ngay_viet` = '".$ngay_dang."',
-			`ten` = '".$ten."',
-			`tieu_de` = '".$tieu_de."',
-			`noi_dung` = '".$noi_dung."'
-			WHERE `id_tin_tuc` = '".$id_tin_tuc."'
+				UPDATE `tbl_tin_tuc` 
+				SET `ten` = '".$ten."', 
+					`tieu_de` = '".$tieu_de."', 
+					`noi_dung` = '".$noi_dung."', 
+					`anh` = '".$anh_minh_hoa."', 
+					`ngay_viet` = '".$ngay_dang."' 
+				WHERE `tbl_tin_tuc`.`id_tin_tuc` = '".$id_tin_tuc."';
 		";
 	} else {
 		$sql = "
-		UPDATE `tbl_tin_tuc`
-		SET
-			`ngay_viet` = '".$ngay_dang."',
-			`ten` = '".$ten."',
-			`anh` = '".$filename."',
-			`tieu_de` = '".$tieu_de."',
-			`noi_dung` = '".$noi_dung."'
-			WHERE `id_tin_tuc` = '".$id_tin_tuc."'
+				UPDATE `tbl_tin_tuc` 
+				SET `ten` = '".$ten."', 
+					`tieu_de` = '".$tieu_de."', 
+					`noi_dung` = '".$noi_dung."', 
+					`anh` = '".$anh_minh_hoa."', 
+					`ngay_viet` = '".$ngay_dang."' 
+				WHERE `tbl_tin_tuc`.`id_tin_tuc` = '".$id_tin_tuc."';
 		";
 	}
 //echo $sql; exit();

@@ -28,7 +28,7 @@
 	// 3. Viết câu lệnh SQL để xóa tin tức có ID như trên
 	$sql = "
 		DELETE
-		FROM tbl_san_pham
+		FROM tbl_menu
 		WHERE id_sp='".$id_sp."'
 	";
 

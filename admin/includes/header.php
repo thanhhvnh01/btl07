@@ -11,7 +11,7 @@
     <ul class="navbar-nav ml-auto">
         <!-- Messages Dropdown Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="/btl/admin/dang_xuat.php">Đăng xuất</a>
+            <a class="nav-link" href="/btl07/admin/dang_xuat.php">Đăng xuất</a>
         </li>
     </ul>
 </nav>

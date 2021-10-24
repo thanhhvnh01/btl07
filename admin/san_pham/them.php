@@ -69,21 +69,6 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Nhà cung cấp</label>
-									<select name="id_ncc" class="form-control" required>
-										<option value="" >--- Chọn loại nhà cung cấp ---</option>
-										<?php 
-											$sql_ncc = "SELECT * FROM tbl_ncc";
-											$nccs = mysqli_query($ket_noi, $sql_ncc);
-											while ($ncc = mysqli_fetch_array($nccs)) {
-										?>
-											<option value="<?php echo $ncc['id_ncc'] ?>" ><?php echo $ncc['ten_ncc'] ?></option>
-										<?php } ?>
-									</select>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
 									<label>Số lượng</label>
 									<input name="so_luong" type="number" class="form-control" required>
 								</div>
@@ -94,28 +79,10 @@
 									<input name="gia_ban" type="number" class="form-control" required >
 								</div>
 							</div>
-							<!-- <div class="col-md-6">
+							<div class="col-md-6">
 								<div class="form-group">
 									<label>Mức khuyến mãi</label>
 									<input name="muc_km" type="number" class="form-control" >
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Giá giảm</label>
-									<input name="gia_ban" type="number" class="form-control" >
-								</div>
-							</div> -->
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>size</label>
-									<input name="size" type="size" class="form-control" required>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label>Màu</label>
-									<input name="mau" type="mau" class="form-control" required>
 								</div>
 							</div>
 							<div class="col-md-12">
