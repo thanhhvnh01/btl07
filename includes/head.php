@@ -53,7 +53,7 @@
             $_SESSION['gio_hang'][$id_sp] = [
                 'id_sp' => $id_sp,
                 'ten_sp' => $them_sp['ten_sp'],
-                'anh' => $them_sp['anh'],
+                'anh_minh_hoa' => $them_sp['anh_minh_hoa'],
                 'gia_ban' => $them_sp['gia_ban'],
                 'gia_ban' => $them_sp['gia_ban'],
                 'so_luong_sp' => $so_luong_sp

@@ -60,7 +60,7 @@
 			<div class="col-sm-2">
 				<div  class="logo" >
 				<a href="index.php">
-				<img src="/btl/img/logo1.png" alt="Rick Owens" />
+				<img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.15752-9/247325730_1310160752764306_7696828847156585627_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=ae9488&_nc_ohc=NmHKp3TKvh8AX-85A2_&_nc_ht=scontent.fhan14-2.fna&oh=debc79a720f374d67cacf29ffd1ace24&oe=619D86D3" alt="Godiet" width="60" height="60" />
 									</a>
 				</div>
 			</div>

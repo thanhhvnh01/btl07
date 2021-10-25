@@ -14,6 +14,34 @@
 </head>
 <body>
 	<?php include 'includes/header.php'; ?>
+	<div class="slideshow-container">
+  <!-- Kết hợp hình ảnh và nội dung cho mội phần tử trong slideshow-->
+   <div class="mySlides fade">
+     <div class="numbertext">1 / 3</div>
+     <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.6435-9/246013529_2946181452314307_212220866091537486_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_ohc=r2LXXr6i5O4AX9-Getf&_nc_ht=scontent.fhan14-2.fna&oh=77a382858bb43fc3f40564d1a1efe3b9&oe=619BDF7F" style="width:100%" alt="concac">
+     <div class="text">Nội Dung 1</div>
+   </div>
+  <div class="mySlides fade">
+     <div class="numbertext">2 / 3</div>
+     <img src="https://images.pexels.com/photos/1581026/pexels-photo-1581026.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="width:100%">
+     <div class="text">Nội Dung 2</div>
+   </div>
+  <div class="mySlides fade">
+     <div class="numbertext">3 / 3</div>
+     <img src="https://images.pexels.com/photos/2582546/pexels-photo-2582546.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" style="width:100%">
+     <div class="text">Nội Dung 3</div>
+   </div>
+  <!-- Nút điều khiển mũi tên-->
+   <a class="prev" onclick="plusSlides(-1)">❮</a>
+   <a class="next" onclick="plusSlides(1)">❯</a>
+ </div>
+ <br>
+<!-- Nút tròn điều khiển slideshow-->
+ <div style="text-align:center">
+   <span class="dot" onclick="currentSlide(1)"></span>
+   <span class="dot" onclick="currentSlide(2)"></span>
+   <span class="dot" onclick="currentSlide(3)"></span>
+ </div>
 		
 	<img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.6435-9/246013529_2946181452314307_212220866091537486_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_ohc=r2LXXr6i5O4AX9-Getf&_nc_ht=scontent.fhan14-2.fna&oh=77a382858bb43fc3f40564d1a1efe3b9&oe=619BDF7F" alt="Ai cha cha"
 	 class="anh-nen" width="2000" style="text-align: center;">
@@ -49,7 +77,7 @@
 									
 									</div>
 									<a href="/btl/chi_tiet_sp.php?id_sp=<?php echo $row["id_sp"]; ?>">
-										<img src="/btl/img/<?php echo $row["anh"]; ?>"/>
+										<img src="/btl/img/<?php echo $row["anh_minh_hoa"]; ?>"/>
 									</a>
 									<div class="actions-btn">
 										<a href="?them_gio_hang=<?php echo $row["id_sp"]; ?>&&so_luong_sp=1"><i class="mdi mdi-cart"></i></a>
@@ -104,7 +132,65 @@
 	</div>
 	
 
-
+	<div class="pages contact-page section-padding">
+        <div class="content-for-layout">
+        <section id="content" class="container-body body-content--contact body-height-calc">
+            <div class="page-wrap contact-wrap">
+            <p class="lienhe">CONTACTS</p>
+                <div id="lienhe" class="col-sm-12 col-md-3"> 
+                    <p class="lienhe2">COMMERCIAL</p>
+                    <p class="lienhe3">FOR ALL DISTRIBUTION ENQUIRIES</p>
+                    <p class="lienhe3">PLEASE CONTACT LUCA RUGGERI</p>
+                    <p class="lienhe3">COMMERCIAL@RICKOWENS.EU</p>
+                    <br>
+                    <p class="lienhe2">PRESS</p>
+                    <p class="lienhe3">PRESS@RICKOWENS.EU</p>
+                    <br>
+                    <p class="lienhe2">HUMAN RESOURCES</p>
+                    <p class="lienhe3">HR@RICKOWENS.EU</p>
+                    <br>
+                    <p class="lienhe2">CUSTOMER CARE</p>
+                    <p class="lienhe3">FOR ALL ENQUIRIES</p>
+                    <p class="lienhe3">PLEASE CONTACT</p>
+                    <p class="lienhe3">CUSTOMERCARE@RICKOWENS.EU</p>
+                    <p class="lienhe3">TEL +39 02 89092664</p>
+                    <p class="lienhe3">MONDAY TO FRIDAY</p>
+                    <p class="lienhe3">FROM 10:30 A.M. TO 7:30 P.M.</p>
+                        
+                    </div>
+                    <form action="./lien_he_thuc_hien.php" enctype="multipart/form-data" method="POST" accept-charset="UTF-8">
+                        <input type="hidden" name="__session_id" value="b09774f4-f010-458b-810f-c02063c9bbb1">
+                        <input type="hidden" name="_csrf_token" value="ZQMcAD8GDxMaZhAhUBkfAiQ5fScNPws6T5LsxuYvc_tNivMQVu8EysDx">
+                        <input type="hidden" name="utf8" value="✓">
+          
+            
+                        <div class="row contact-form">
+                        <div id="lienhe" class="col-sm-12 col-md-6"> 
+                            <div class="is-vertical-flex form-group">
+                            <p class="lienhe">HỌ VÀ TÊN</p>
+                                <input type="text" class="form-control" name="first_name" id="customerName" autocomplete="off">
+                            </div>
+                            <div class="is-vertical-flex form-group">
+                            <p class="lienhe">EMAIL ADDRESS</p>
+                                <input type="email" class="form-control" name="email" id="customerEmail" autocomplete="off">
+                            </div>
+                            <div class="is-vertical-flex form-group">
+                            <p class="lienhe">SỐ ĐIỆN THOẠI</p>
+                                <input type="number" class="form-control" name="phone_number" id="customerPhone" autocomplete="off">
+                            </div>
+                            <div class="is-vertical-flex form-group">
+                            <p class="lienhe">NỘI DUNG</p>
+                                <textarea class="form-control" name="description" id="customerFeedbackContent" rows="6"></textarea>
+                            </div>
+                            
+                                <input type="submit" class="btn default-btn btn-send" value="GỬI" id="btn-submit">
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
 	<!-- tab-products section end -->
 	<div class="phuter">
 	<br>

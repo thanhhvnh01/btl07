@@ -72,7 +72,7 @@
 													<span>new</span>
 												</div>
 												<a href="/btl/chi_tiet_sp.php?id_sp=<?php echo $row["id_sp"]; ?>">
-													<img src="/btl/img/<?php echo $row["anh"]; ?>"/>
+													<img src="/btl/img/<?php echo $row["anh_minh_hoa"]; ?>"/>
 												</a>
 												<div class="actions-btn">
 													<a href="?them_gio_hang=<?php echo $row["id_sp"]; ?>&&so_luong_sp=1"><i class="mdi mdi-cart"></i></a>
