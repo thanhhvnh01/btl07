@@ -16,7 +16,7 @@
 
 	<?php 
 		$id_sp = $_GET["id_sp"];
-		$sql = "SELECT * FROM tbl_san_pham WHERE id_sp = $id_sp";
+		$sql = "SELECT * FROM tbl_menu WHERE id_sp = $id_sp";
 		$sql_query = mysqli_query($ket_noi, $sql);
 		$san_pham = mysqli_fetch_array($sql_query);
 
@@ -34,7 +34,7 @@
 									<div class="product-img tab-content">
 										<div class="simpleLens-container tab-pane active fade in" id="sin-2">
 	
-											<a class="simpleLens-image" data-lens-image="/btl/img/<?php echo $san_pham['anh'] ?>" href="#"><img src="/btl/img/<?php echo $san_pham['anh'] ?>" alt="" class="simpleLens-big-image"></a>
+											<a class="simpleLens-image" data-lens-image="/btl/img/<?php echo $san_pham['anh_minh_hoa'] ?>" href="#"><img src="/btl/img/<?php echo $san_pham['anh_minh_hoa'] ?>" alt="" class="simpleLens-big-image"></a>
 										</div>
 										<?php $anh_sp_query = mysqli_query($ket_noi, "SELECT * FROM tbl_anh WHERE id_sp = ".$id_sp);
 
@@ -42,7 +42,7 @@
 											<div class="simpleLens-container tab-pane fade in" id="sin-anh-<?php echo $anh['id_anh'] ?>">
 												<div class="pro-type">
 												</div>
-												<a class="simpleLens-image" data-lens-image="/btl/img/<?php echo $anh['anh'] ?>" href="#"><img src="/btl/img/<?php echo $anh['anh'] ?>" alt="" class="simpleLens-big-image"></a>
+												<a class="simpleLens-image" data-lens-image="/btl/img/<?php echo $anh['anh_minh_hoa'] ?>" href="#"><img src="/btl/img/<?php echo $anh['anh_minh_hoa'] ?>" alt="" class="simpleLens-big-image"></a>
 											</div>
 										<?php }?>
 									</div>
