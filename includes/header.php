@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/btl/css/BaiTapLon.css">
+	<link rel="stylesheet" href="/btl/accets/css/style.css">
 </head>
 <body>
 <div class="header1">
@@ -59,7 +60,7 @@
 			<div class="col-sm-2">
 				<div  class="logo" >
 				<a href="index.php">
-				<img src="/btl/img/logo.png" alt="Rick Owens" />
+				<img src="/btl/img/logo1.png" alt="Rick Owens" />
 									</a>
 				</div>
 			</div>
@@ -80,7 +81,6 @@
 										<?php } ?>
 									</ul>
 								</li>
-								<li><a href="/btl/Bo_suu_tap.php">Bộ sưu tập</a></li>
 								<li><a href="/btl/blog.php">Blog</a></li>
 								<li><a href="/btl/gioi_thieu.php">Giới thiệu</a></li>
 								<li><a href="/btl/lien_he.php">Liên hệ</a></li>

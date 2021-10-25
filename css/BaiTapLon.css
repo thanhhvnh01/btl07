@@ -10,6 +10,7 @@
     line-height: 100%;
 }
 
+
 .font-playfair {
     font-family: "Montserrat", sans-serif  ;
     font-weight: 400;
@@ -165,10 +166,23 @@ ul {
     left: 50px;
     right: 50px;
 }
+img.anh-nen{
+    display:block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1100px;
+    height: 500px;
+}
 
 .imageBox {
     position: relative;
-    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
   }
 .imageBox .hoverImg {
     position: absolute;
@@ -259,6 +273,9 @@ input[type=submit] {
     font-family: "Montserrat", sans-serif !important ;
     color: #0b0b0b;
 }
+div.anh_nen{
+    text-align: center;
+}
 
 .rowfoot li:not(:last-child):after {
     content: "    |    ";
@@ -284,11 +301,13 @@ single-product {
 }
 
 header.header-one {
+   
 position: static;
 }
 
 .header1 {
     font-family: "Montserrat", sans-serif !important ;
+    
     border: none !important;
     outline: none !important;
     }
@@ -302,7 +321,7 @@ position: static;
     }
 
     .logohome {
-        padding-top: 100px;
+        padding-top: auto;
         width: 20%;
         height: 20% ;
     }
@@ -344,7 +363,7 @@ div {
 }
 
 .containerr{
-    float: right;
+float: right;
 }
 
 .container-body {
@@ -453,7 +472,7 @@ section {
 }
 a{
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.65);
+    color:#98c439;
     
 }
 

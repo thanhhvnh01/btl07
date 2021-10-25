@@ -36,7 +36,7 @@
 
 									// Lấy danh sách sản phẩm và phân trang
 									// BƯỚC 2: TÌM TỔNG SỐ RECORDS
-									$result = mysqli_query($ket_noi, "select count(id_sp) as total from tbl_san_pham WHERE id_phan_loai = $id_phan_loai");
+									$result = mysqli_query($ket_noi, "select count(id_sp) as total from tbl_menu WHERE id_phan_loai = $id_phan_loai");
 									$row = mysqli_fetch_assoc($result);
 									$total_records = $row['total'];
 									
@@ -60,7 +60,7 @@
 									
 									// BƯỚC 5: TRUY VẤN LẤY DANH SÁCH SẢN PHẨM
 									// Có limit và start rồi thì truy vấn CSDL lấy danh sách sản phẩm
-									$sp_query = mysqli_query($ket_noi, "SELECT * FROM tbl_san_pham WHERE id_phan_loai = $id_phan_loai");
+									$sp_query = mysqli_query($ket_noi, "SELECT * FROM tbl_menu	 WHERE id_phan_loai = $id_phan_loai");
 									// PHẦN HIỂN THỊ SẢN PHẨM
 									// BƯỚC 6: HIỂN THỊ DANH SÁCH SẢN PHẨM
 									while ($row = mysqli_fetch_assoc($sp_query)){
@@ -81,7 +81,7 @@
 											</div>
 											<div class="product-dsc">
 												<p><a href="/btl/chi_tiet_sp.php?id_sp=<?php echo $row["id_sp"]; ?>"><?php echo $row["ten_sp"];?></a></p>
-												<span><?php echo $row["gia_ban"];?> $ <del><?php echo $row["gia_ban"];?></del></span>
+												<span><?php echo $row["gia_ban"];?> vnd</span>
 											</div>
 										</div>
 									</div>
